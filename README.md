@@ -99,4 +99,17 @@ If you run into more errors that do not have a clear error message, then run the
 
 **Trouble Shooting:** There should not be any errors that come up here but if one does, follow the error messages. Date should be saved in the csv files at this point so plots can be generated back at Mcgill
 
+**Taking a Measurement**
+1. Open Windows PowerShell
+2. Enter the uMAMA directory via
+   `cd uMAMA`
+3. Run the reset script via
+   `Python TakePhoto.py`
+4. Answer the prompt with which uMAMA you are taking a measurement of (integer between 1 and 12)
+5. After a few seconds a window with an image should pop up. The window icon will look like this in your task bar:
+  ![image](https://github.com/raghavbh5588/uMAMA/assets/115365995/4debfe6c-f6aa-4d85-b8e8-a21fc63f83db)
+6. On the image window, click the "y" key if the image is good or click the "n" key to abort the program.
+7. The image should save with its date in its folder with the format (uMAMA_#_MM-DD-YYYY_HH-MM-SS)
 
+**Trouble Shooting:** If you see the error message `ERROR!! Oopsies!! I think you forgot to connect the arduino!` wait a minute for the computer to recognize the arduino. If after a minute it is still giving that error, you may need to change the COM Port. View the intructions for that in the "Changing COM Port" section. <br />
+If you see the error message `ERROR!!!!! Hmmm, make sure the camera is connected!!` wait a minute for the computer to recognize the camera. If it gives the same message after a minute, the would mean the camera is malfunctioning and there likley is no solution. A last ditch effort could be to change the selected camera. View the "Changing Camera Selection" section.
