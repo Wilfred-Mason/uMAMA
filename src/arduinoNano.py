@@ -9,6 +9,7 @@ def turnOffLight(arduino):
 def detectCOMPort():
     ports = list(serial.tools.list_ports.comports())
     for p in ports:
+        print(p)
         if "Arduino" in p.description:
             p = str(p)
             return p[0:4]

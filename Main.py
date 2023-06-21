@@ -13,16 +13,19 @@ circleCentres = []
 
 def click_event(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
-        newFrame = frame
+        newClearFrame = clearFrame.copy()
         circleCentres.append(((x,y), 3))
-        newFrame = cv2.circle(frame, (x,y), 5, (0,0,255), 1)
-        cv2.imshow("image", newFrame)
+        addFrame = camera.generateMask(newClearFrame, circleCentres)
+        cv2.imshow("image", addFrame)
     if event == cv2.EVENT_RBUTTONDOWN:
         newClearFrame = clearFrame.copy()
-        circleCentres.pop()
-        frame1 = camera.generateMask(newClearFrame, circleCentres)
-        frame = frame1
-        cv2.imshow("image", frame)
+        try:
+            circleCentres.pop()
+        except:
+            print("No more circles left to remove!")
+            pass
+        subFrame = camera.generateMask(newClearFrame, circleCentres)
+        cv2.imshow("image", subFrame)
 
 
 
@@ -50,9 +53,6 @@ if __name__ == "__main__":
     try:
         frame = camera.capture(cam)
         clearFrame = frame.copy()
-        cv2.imshow("dude1", frame)
-        cv2.imshow("dude2", clearFrame)
-        cv2.waitKey(0)
     except:
         print("ERROR!!!!! Hmmm, make sure the camera is connected!! If the camera is connected, wait a tad bit longer, it may take a minute for the computer to detect the camera")
         quit()
@@ -60,10 +60,6 @@ if __name__ == "__main__":
     print("Select all of your sampling spots on the image. When finished, click the 'Esc' key")
     cv2.imshow('image', frame)
     cv2.setMouseCallback('image', click_event)
-    cv2.waitKey(0)
-
-    cv2.imshow("dude1", frame)
-    cv2.imshow("dude2", clearFrame)
     cv2.waitKey(0)
     
     if len(circleCentres) != 16:

@@ -55,8 +55,8 @@ def sortCircles(circles):
 
 def generateMask(frame, circleCentres):
     for circle in circleCentres:
-        newFrame = cv2.circle(frame, circle[0], 5, (0, 0,255), 1)       
-    return newFrame
+        frame = cv2.circle(frame, circle[0], 5, (0, 0,255), 1)       
+    return frame
 
 def numberCircles(maskedImage, sortedCircles):
     for i, circle in enumerate(sortedCircles):
