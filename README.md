@@ -97,4 +97,6 @@ If you run into more errors that do not have a clear error message, then run the
 5. A plot will pop up with the colour progression of each well's colour
 6. The figure will be saved in the folder of each uMAMA
 
-**Trouble Shooting:** 
+**Trouble Shooting:** There should not be any errors that come up here but if one does, follow the error messages. Date should be saved in the csv files at this point so plots can be generated back at Mcgill
+
+
