@@ -119,17 +119,17 @@ If you see the error message `ERROR!!!!! Hmmm, make sure the camera is connected
 1. Open "Device Manager" in Windows
 2. Open the drop down menu labeled "Ports (COM & LPT)"
 3. If the arduino is connected, one of the listed ports should be the arduino: <br />
-<img width="229" alt="image" src="https://github.com/raghavbh5588/uMAMA/assets/115365995/c92500a8-3929-4188-a204-5c2f32564218">
-Remember the COM number for the port<br />
-If none of the COM ports apears to be an arduino, remember all of the listed COM numbers. You will have to try them all until the Python script works
-4. Open the Python script named "arduinoNano.py" by this pathway: `/uMAMA/src/arduinoNano.py`. To open the script, right click the file and open with IDE.
-5. Change the variable named "COMPort" in line 17 to the COM number that was listed in device manager.
-6. Save the file and try the script that you originally wanted to run
-7. If the problem is not fixed, there isn't much you can do. This may mean that the arduino is busted.
+<img width="229" alt="image" src="https://github.com/raghavbh5588/uMAMA/assets/115365995/c92500a8-3929-4188-a204-5c2f32564218"> <br />
+Remember the COM number for the port <br />
+If none of the COM ports apears to be an arduino, remember all of the listed COM numbers. You will have to try them all until the Python script works <br />
+4. Open the Python script named "arduinoNano.py" by this pathway: `/uMAMA/src/arduinoNano.py`. To open the script, right click the file and open with IDE. <br />
+5. Change the variable named "COMPort" in line 17 to the COM number that was listed in device manager. <br />
+6. Save the file and try the script that you originally wanted to run <br />
+7. If the problem is not fixed, there isn't much you can do. This may mean that the arduino is busted. <br />
 
-**Changing Camera Selection**<br />
+**Changing Camera Selection** <br />
 If the camera does not seem to work, you can try changing the camera selection.<br />
-However, this will likely not work.
+However, this will likely not work.  <br />
 1. Open the Python script named "camera.py" by this pathway: `/uMAMA/src/camera.py`. To open the script, right click the file and open with IDE.
 2. Change the variable named "selection" in line 6 to either 0 or 2. Try both.
 3. Save the file and try the script that you originally wanted to run
