@@ -13,22 +13,29 @@ circleCentres = []
 
 def click_event(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:
+        newFrame = frame
         circleCentres.append(((x,y), 3))
-        cv2.circle(frame, (x,y), 5, (0,0,255), 1)
+        newFrame = cv2.circle(frame, (x,y), 5, (0,0,255), 1)
+        cv2.imshow("image", newFrame)
+    if event == cv2.EVENT_RBUTTONDOWN:
+        newClearFrame = clearFrame.copy()
+        circleCentres.pop()
+        frame1 = camera.generateMask(newClearFrame, circleCentres)
+        frame = frame1
         cv2.imshow("image", frame)
 
 
 
 if __name__ == "__main__":
     try:
-        arduino = serial.Serial(arduinoNano.detectCOMPort(), 9600, timeout=0) #connect to arduino (change COM port if nessisary)
+        arduino = serial.Serial("COM5", 9600, timeout=0) #connect to arduino (change COM port if nessisary)
         arduinoNano.turnOffLight(arduino)
     except:
-        print("ERROR!! Oopsies!! I think you forgot to connect the arduino! If the arduino is connect, hold your horses!! It may take a minute for the computer to detect the arduino")
+        print("ERROR!! Oopsies!! I think you forgot to connect the arduino! If the arduino is connected, hold your horses!! It may take a minute for the computer to detect the arduino")
         quit()
 
     uMAMA = input("Which uMAMA are you measuring? (input: integer 1 - 12): ")
-    if (int(uMAMA) >= 12 & int(uMAMA) <= 1):
+    if (int(uMAMA) > 12 or int(uMAMA) < 1):
         print("That was an invalid input, you need to specify the uMAMA plate by an integer between 1 and 12")
         quit()
 
@@ -42,7 +49,10 @@ if __name__ == "__main__":
 
     try:
         frame = camera.capture(cam)
-        clearFrame = camera.capture(cam)
+        clearFrame = frame.copy()
+        cv2.imshow("dude1", frame)
+        cv2.imshow("dude2", clearFrame)
+        cv2.waitKey(0)
     except:
         print("ERROR!!!!! Hmmm, make sure the camera is connected!! If the camera is connected, wait a tad bit longer, it may take a minute for the computer to detect the camera")
         quit()
@@ -52,13 +62,15 @@ if __name__ == "__main__":
     cv2.setMouseCallback('image', click_event)
     cv2.waitKey(0)
 
+    cv2.imshow("dude1", frame)
+    cv2.imshow("dude2", clearFrame)
+    cv2.waitKey(0)
+    
     if len(circleCentres) != 16:
         print("Oh no! You didnt select 16 sampling spots. You need to run this program again :/")
         quit()
 
     circleCentres = camera.sortCircles(circleCentres)
-
-    cv2.waitKey(0)
 
     colours = camera.extractColour(clearFrame, circleCentres, uMAMA)
 

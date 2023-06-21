@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-uMAMA = input("Which uMAMA do you want to generate a plot for?")
+uMAMA = input("Which uMAMA do you want to generate a plot for?: ")
 
 try:
     df = pandas.read_csv('uMAMA_'+ uMAMA+ '/RGB_Data.csv', header= None)
