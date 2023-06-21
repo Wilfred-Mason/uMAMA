@@ -92,14 +92,14 @@ If you run into more errors that do not have a clear error message, then run the
 2. Enter the uMAMA directory via
    `cd uMAMA`
 3. Run the reset script via
-   `Python GeneratePlot.py`
+   `Python GenerateFigure.py`
 4. Answer the prompt with which uMAMA's data you want visualize (integer between 1 and 12)
 5. A plot will pop up with the colour progression of each well's colour
 6. The figure will be saved in the folder of each uMAMA
 
 **Trouble Shooting:** There should not be any errors that come up here but if one does, follow the error messages. Date should be saved in the csv files at this point so plots can be generated back at Mcgill
 
-**Taking a Measurement**
+**Taking a Photo**
 1. Open Windows PowerShell
 2. Enter the uMAMA directory via
    `cd uMAMA`
