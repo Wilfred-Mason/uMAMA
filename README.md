@@ -39,7 +39,6 @@ Repository for the development and research of a microfluidic biosignature detec
 
 ### Intructions
 **First Time Measrument**
-**Steps**
 1. Open Windows PowerShell
 2. Enter the uMAMA directory via
    `cd uMAMA`
@@ -51,7 +50,7 @@ Repository for the development and research of a microfluidic biosignature detec
 7. Next, ensure that all uMAMA folders are present. There should be 12 folders with the format (uMAMA_#). Create new folders and edit folder naming in case of any mistakes.
 8. You are now good to take your first measurement!
 
-**Trouble Shooting**
+**Trouble Shooting:**
   If the `Reset.py` script returns any errors, you can manually delete all data by entering
   each uMAMA folder and deleting its content (DO NOT DELETE THE uMAMA FOLDERS)
   
