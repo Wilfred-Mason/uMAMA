@@ -57,7 +57,7 @@ if __name__ == "__main__":
         print("ERROR!!!!! Hmmm, make sure the camera is connected!! If the camera is connected, wait a tad bit longer, it may take a minute for the computer to detect the camera")
         quit()
 
-    print("Select all of your sampling spots on the image. When finished, click the 'Esc' key")
+    print("Select all of your sampling spots on the image using the left mouse click. To undo your last spot, use the right mouse click. When finished, click the 'Esc' key")
     cv2.imshow('image', frame)
     cv2.setMouseCallback('image', click_event)
     cv2.waitKey(0)

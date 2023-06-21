@@ -35,9 +35,9 @@ const int Speed2 = 150;
 const int Speed3 = 150;
 const int Speed4 = 120;
 //Motor run time [milliseconds], adjusted to achieve the required volume delivery
-const int Time1 = 7000; //uMAMA pump 
+const int Time1 = 3000; //uMAMA pump 
 const int Time2 = 13400;//Not used
-const int Time3 = 7000; //uMAMA pump
+const int Time3 = 3000; //uMAMA pump
 const int Time4 = 10000; //Receptacle filling pump
 //Ramping Parameters
 const int RampTime = 1000;
