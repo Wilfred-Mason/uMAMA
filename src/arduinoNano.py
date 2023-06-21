@@ -13,3 +13,5 @@ def detectCOMPort():
         if "Arduino" in p.description:
             p = str(p)
             return p[0:4]
+
+COMPort = "COM5"

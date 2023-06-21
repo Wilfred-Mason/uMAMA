@@ -6,7 +6,7 @@ import serial
 import time
 
 try:
-    arduino = serial.Serial("COM8", 9600, timeout=0) #connect to arduino (change COM port if nessisary)
+    arduino = serial.Serial(arduinoNano.COMPort, 9600, timeout=0) #connect to arduino (change COM port if nessisary)
     arduinoNano.turnOffLight(arduino)
 except:
     print("ERROR!! Oopsies!! I think you forgot to connect the arduino! If the arduino is connected, hold your horses!! It may take a minute for the computer to detect the arduino")
