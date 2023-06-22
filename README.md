@@ -62,7 +62,8 @@ Repository for the development and research of a microfluidic biosignature detec
    `Python Main.py`
 4. Answer the prompt with which uMAMA you are taking a measurement of (integer between 1 and 12)
 5. After a few seconds a window with an image should pop up. The window icon will look like this in your task bar:
-  ![image](https://github.com/raghavbh5588/uMAMA/assets/115365995/4debfe6c-f6aa-4d85-b8e8-a21fc63f83db)
+![image](https://github.com/raghavbh5588/uMAMA/assets/115365995/ec5dd277-48ab-4987-b302-6bffc765ad12)
+
 6. On the image window, select which spots to sample colour from using the left mouse click. You can undo your last selection with a right mouse click anywhere in the image window
 7. When finished selecting 16 spots, click the "esc" key while the image window is slected
 8. The script will extract the colours and save them into the RBG_Data.csv file in the
@@ -119,7 +120,7 @@ If you see the error message `ERROR!!!!! Hmmm, make sure the camera is connected
 1. Open "Device Manager" in Windows
 2. Open the drop down menu labeled "Ports (COM & LPT)"
 3. If the arduino is connected, one of the listed ports should be the arduino: <br />
-<img width="229" alt="image" src="https://github.com/raghavbh5588/uMAMA/assets/115365995/c92500a8-3929-4188-a204-5c2f32564218"> <br />
+![image](https://github.com/raghavbh5588/uMAMA/assets/115365995/ac155b20-9ea1-4d9b-b194-01bfb0b8133d)<br />
 Remember the COM number for the port <br />
 If none of the COM ports apears to be an arduino, remember all of the listed COM numbers. You will have to try them all until the Python script works <br />
 4. Open the Python script named "arduinoNano.py" by this pathway: `/uMAMA/src/arduinoNano.py`. To open the script, right click the file and open with IDE. <br />
