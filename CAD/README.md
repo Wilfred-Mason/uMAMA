@@ -1,5 +1,6 @@
+# Overview of System Hardware
 
-# CAD Contents
+## CAD Contents
 
 1) [CAMERA_HOLDER](CAMERA_HOLDER.STL): fixes webcam on CAMERA_MOUNT
 2) [CAMERA_MOUNT_(SIZE)](CAMERA_MOUNT_M.STL): fixes CAMERA_HOLDER to the INTEGRATED_UNIT, comes in four size (M, L, XL, XXL)
@@ -10,3 +11,6 @@
 7) [LEG](LEG.STL): support for the INTEGRATED_UNIT/BASE
 8) [PUMP_MOUNT](PUMP_MOUNT.STL): mount for the peristaltic pumps ([product page](https://www.amazon.ca/Gikfun-Peristaltic-Connector-Aquarium-Analytic/dp/B01IUVHB8E/ref=sr_1_18?crid=37BGNL55NMAI8&keywords=peristaltic+pump&qid=1687534161&sprefix=peristaltic+pump%2Caps%2C72&sr=8-18))
 
+## Final Assembly
+
+![Assembly](uMAMA_PLATFORM.png)
