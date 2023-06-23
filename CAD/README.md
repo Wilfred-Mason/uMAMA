@@ -1,7 +1,7 @@
 
 # CAD Contents
 
-1) CAMERA_HOLDER: fixes webcam on CAMERA_MOUNT
+1) [CAMERA_HOLDER](CAMERA_HOLDER.stl): fixes webcam on CAMERA_MOUNT
 2) CAMERA_MOUNT_(SIZE): fixes CAMERA_HOLDER to the INTEGRATED_UNIT, comes in four size (M, L, XL, XXL)
 3) INTEGRATED_UNIT: mount for CAMERA_MOUNT_(SIZE), PUMP_MOUNT(s) and the uMAMA module
 4) INTEGRATED_UNIT_BASE: base for the INTEGRATED_UNIT
