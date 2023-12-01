@@ -13,4 +13,4 @@
 
 ## Final Assembly
 
-![Assembly](uMAMA_PLATFORM.png)
+![Assembly](uMAMA_VISION_PUMP_ASSEMBLY.png)
